@@ -3,7 +3,7 @@ _"Hardcore".toCore(Infrastructure-as-Code) Tool_
 
 Demo materials for my PowerShell Summit 2019 talk on Terraform
 
-[Slides](.\Slides.pdf)
+[Slides](Slides.pdf)
 
 ## Create an Azure Service Principle
 
