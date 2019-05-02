@@ -1,0 +1,18 @@
+variables:
+  - group: SOEDev TF testing
+
+jobs:
+  - job: test_pscore_win2016
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+    - pwsh: ./build.ps1 -Task Test -Bootstrap -Verbose
+      displayName: Build and Test
+      env:
+        TF_TESTING_CLIENT_SECRET: $(TF_TESTING_CLIENT_SECRET)
+    - task: PublishTestResults@2
+      inputs:
+        testRunner: NUnit
+        testResultsFiles: '**/testResults.xml'
+        testRunTitle: test_pscore_win2016
+      displayName: Publish Test Results

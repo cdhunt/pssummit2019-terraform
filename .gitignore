@@ -5,5 +5,11 @@
 *.tfstate
 *.tfstate.*
 
+# Plan files
+*.plan
+
 # .tfvars files
 *.tfvars
+
+# test results
+*.xml
